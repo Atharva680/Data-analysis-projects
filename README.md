@@ -1,77 +1,79 @@
-# Data-analysis-projects
-# 📊 GitHub Repository File Analysis  
-*Analyzing Open Source Trends from File-Level GitHub Data*
+# 📊 GitHub File-Level Analysis: Tech Stack Trends & Repository Metadata
+
+This project presents an analytical overview of GitHub repositories at the **file level**, uncovering trends in tech stacks, file structures, and metadata like stars, contributors, and creation dates. It is intended for researchers, data analysts, and developers interested in understanding how codebases evolve and which technologies dominate the open-source ecosystem.
 
 ---
 
-## 🧠 Project Overview
+## 📌 Project Objective
 
-This project focuses on analyzing the **structure, language usage, and file content trends** in open-source GitHub repositories using a custom dataset with the following format:
+The goal of this project is to:
 
-- `sample_path` – The relative file path in the repository
-- `content` – The source code or text content of the file
-- `extension` – The file extension representing the language (e.g., `py`, `js`, `html`)
-
-By analyzing these features, we gain insights into:
-- Popular technologies and languages
-- Common code patterns and keywords
-- Directory structures and modularity practices
+- Collect and analyze file-level data from GitHub repositories
+- Visualize trends in file extensions, languages, and repository metadata
+- Identify patterns in repository composition and tech stack adoption
+- Provide a research-ready dataset for further analysis in academia or industry
 
 ---
 
-## 🎯 Research Objectives
+## 📁 Dataset Schema
 
-1. **Understand technology trends** by analyzing file extensions across repositories.
-2. **Quantify code composition** by measuring lines, keywords, and file structures.
-3. **Visualize directory depth and modularization** in modern repositories.
-4. **Compare usage of languages like Python, JavaScript, C++** using word frequency, file types, and layout.
+**File:** `github_repo_summary.csv`  
+Sample structure of the dataset:
 
----
-
-## 📁 Dataset Format
-
-| Column Name   | Description |
-|---------------|-------------|
-| `sample_path` | Path of the file inside a GitHub repo (e.g., `src/App.js`) |
-| `content`     | Raw source code or text content of the file |
-| `extension`   | File type/extension (e.g., `py`, `js`, `html`) |
-
-> 📌 Dataset collected via GitHub API, file crawlers, or open datasets (e.g., CodeSearchNet, BigCode).
+| Column Name   | Description                                       |
+|---------------|---------------------------------------------------|
+| `sample_path` | File path relative to the repository root         |
+| `content`     | File content or abstracted summary (optional)     |
+| `extension`   | File extension (e.g., `.py`, `.md`, `.js`)        |
+| `repo_name`   | Name of the GitHub repository                     |
+| `user_name`   | GitHub username or organization                   |
+| `stars`       | Number of GitHub stars                            |
+| `language`    | Primary programming language used                 |
+| `created_at`  | Repository creation date                          |
 
 ---
 
-## 📊 Key Visualizations
+## 🧰 Tools & Technologies
 
-- **Bar Plot** – Top file extensions by count
-- **Word Cloud** – Most common keywords in Python or JavaScript files
-- **Histogram** – File path depth distribution
-- **Heatmap** – Keyword frequency by file type
-- **Stacked Area Chart** – File extension usage over time (if timestamp available)
-
----
-
-## 🔧 Tools & Libraries Used
-
-| Tool            | Purpose                     |
-|-----------------|-----------------------------|
-| `Python`        | Main programming language   |
-| `Pandas`        | Data manipulation           |
-| `Matplotlib`    | Basic visualizations        |
-| `Seaborn`       | Statistical plots           |
-| `WordCloud`     | Text frequency visualization|
-| `PyGitHub`      | GitHub data extraction (optional) |
+- **GitHub REST API / PyGitHub** – Data extraction
+- **Pandas** – Data wrangling and transformation
+- **Matplotlib / Seaborn** – Data visualization
+- **Jupyter Notebook** – Exploratory analysis
 
 ---
 
-## 📌 Installation
+## 📊 Analysis Performed
 
-```bash
-git clone https://github.com/<your-username>/github-file-analysis.git
-cd github-file-analysis
-pip install -r requirements.txt
+- **Language and Extension Trends**: Top programming languages and file types across repositories
+- **Repo Popularity Metrics**: Stars distribution, active organizations, top contributors
+- **Temporal Trends**: Growth in stars, commits, or tech stack adoption over years
+- **Repository Composition**: Common file structures and usage across open-source projects
 
+---
 
+## 📈 Visualizations Suggested
 
+- **Stacked Area Chart** – Stars and forks over time
+- **Bar Plots** – Top file extensions, active contributors, most used languages
+- **Network Graph** – Advanced visualization for repo dependencies or collaboration
+- **Heatmaps** – Correlation between stars, language, file count, and other metrics
+
+---
+
+## 🎓 Research Applications
+
+This project is designed to support:
+
+- 📘 Academic research on open-source software ecosystems
+- 🧪 Software engineering studies of project structures
+- 🧠 Tech trend analysis by data science professionals
+- 🏢 Enterprise-level audits of OSS contributions
+
+---
+
+## 📬 Citation (BibTeX)
+
+```bibtex
 @project{github_file_analysis_2025,
   title={Analyzing GitHub Repositories at File Level: Tech Stack Trends, Structures, and Content},
   author={Atharva Shinde},
@@ -79,3 +81,4 @@ pip install -r requirements.txt
   howpublished={GitHub},
   note={\url{https://github.com/<your-username>/github-file-analysis}}
 }
+
