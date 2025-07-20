@@ -69,16 +69,10 @@ This project is designed to support:
 - 🧠 Tech trend analysis by data science professionals
 - 🏢 Enterprise-level audits of OSS contributions
 
----
+##🙋‍♂️ Author
 
-## 📬 Citation (BibTeX)
-
-```bibtex
-@project{github_file_analysis_2025,
-  title={Analyzing GitHub Repositories at File Level: Tech Stack Trends, Structures, and Content},
-  author={Atharva Shinde},
-  year={2025},
-  howpublished={GitHub},
-  note={\url{https://github.com/<your-username>/github-file-analysis}}
-}
+Atharva Shinde
+-📧 sbjitatharvas@gmail.com
+-🔗 LinkedIn
+-🌐 Portfolio
 
